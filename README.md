@@ -4,7 +4,7 @@ a little app to learn flux-react
 ### 监听store：
     把EventEmitter.prototype 挂载到TodoStore上,监听store的变化，并触发回调
 ```
-    const TodoStore = assign({}, EventEmitter.prototype, {
+const TodoStore = assign({}, EventEmitter.prototype, {
       todos: [{ id: uuid.v4(), content: 'first one' }, { id: uuid.v4(), content: 'second one' }],
     getAll() {
       return this.todos;
@@ -25,7 +25,7 @@ a little app to learn flux-react
     removeChangeListener(callback) {
       this.removeChangeListener('change', callback);
     }
-    });
+});
 ```
 ## 运行
 `npm install` <br>
