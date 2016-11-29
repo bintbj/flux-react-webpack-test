@@ -5,7 +5,7 @@ a little app to learn flux-react
     把EventEmitter.prototype 挂载到TodoStore上,监听store的变化，并触发回调
 ```
 const TodoStore = assign({}, EventEmitter.prototype, {
-      todos: [{ id: uuid.v4(), content: 'first one' }, { id: uuid.v4(), content: 'second one' }],
+    todos: [{ id: uuid.v4(), content: 'first one' }, { id: uuid.v4(), content: 'second one' }],
     getAll() {
       return this.todos;
     },
